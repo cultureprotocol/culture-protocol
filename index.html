@@ -1,0 +1,437 @@
+<!DOCTYPE html><!--  This site was created in Webflow. https://www.webflow.com  -->
+<!--  Last Published: Fri Feb 02 2024 13:52:52 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="65baf42e0b4967e9e10493db" data-wf-site="65baf42e0b4967e9e10493d4">
+<head>
+  <meta charset="utf-8">
+  <title>Culture Protocol</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/culture-protocol.webflow.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Roboto:300,300italic,regular,italic,500,500italic,700,700italic"]  }});</script>
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="global-styles w-embed">
+      <style>
+/* Make text look crisper and more legible in all browsers */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+/* Focus state style for keyboard navigation for the focusable elements */
+*[tabindex]:focus-visible,
+  input[type="file"]:focus-visible {
+   outline: 0.125rem solid #4d65ff;
+   outline-offset: 0.125rem;
+}
+/* Set color style to inherit */
+.inherit-color * {
+    color: inherit;
+}
+/* Get rid of top margin on first element in any rich text element */
+.w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
+  margin-top: 0 !important;
+}
+/* Get rid of bottom margin on last element in any rich text element */
+.w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+	margin-bottom: 0 !important;
+}
+/* Make sure containers never lose their center alignment */
+.container-medium,.container-small, .container-large {
+	margin-right: auto !important;
+  margin-left: auto !important;
+}
+/* 
+Make the following elements inherit typography styles from the parent and not have hardcoded values. 
+Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
+Uncomment this CSS to use it in the project. Leave this message for future hand-off.
+*/
+/*
+a,
+.w-input,
+.w-select,
+.w-tab-link,
+.w-nav-link,
+.w-dropdown-btn,
+.w-dropdown-toggle,
+.w-dropdown-link {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+}
+*/
+/* Apply "..." after 3 lines of text */
+.text-style-3lines {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+/* Apply "..." after 2 lines of text */
+.text-style-2lines {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+/* Adds inline flex display */
+.display-inlineflex {
+  display: inline-flex;
+}
+/* These classes are never overwritten */
+.hide {
+  display: none !important;
+}
+@media screen and (max-width: 991px) {
+    .hide, .hide-tablet {
+        display: none !important;
+    }
+}
+  @media screen and (max-width: 767px) {
+    .hide-mobile-landscape{
+      display: none !important;
+    }
+}
+  @media screen and (max-width: 479px) {
+    .hide-mobile{
+      display: none !important;
+    }
+}
+.margin-0 {
+  margin: 0rem !important;
+}
+.padding-0 {
+  padding: 0rem !important;
+}
+.spacing-clean {
+padding: 0rem !important;
+margin: 0rem !important;
+}
+.margin-top {
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-top {
+  padding-right: 0rem !important;
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+.margin-right {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-right {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+.margin-bottom {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-bottom {
+  padding-top: 0rem !important;
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+.margin-left {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+.padding-left {
+  padding-top: 0rem !important;
+  padding-right: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+.margin-horizontal {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+.padding-horizontal {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+.margin-vertical {
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-vertical {
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+</style>
+    </div>
+    <main class="main-wrapper">
+      <div class="nav_fixed">
+        <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-no-shadow-container w-nav">
+          <div class="container-regular">
+            <div class="navbar-wrapper">
+              <a href="#" class="navbar-brand w-nav-brand"><img src="images/culture-protocol-svg.svg" loading="lazy" alt=""></a>
+              <div class="line"></div>
+              <nav role="navigation" class="nav-menu-wrapper w-nav-menu">
+                <ul role="list" class="nav-menu w-list-unstyled">
+                  <li>
+                    <a href="#about" class="nav-link">About</a>
+                  </li>
+                  <li>
+                    <a href="#how-it-works" class="nav-link">How it works</a>
+                  </li>
+                  <li>
+                    <a href="#offerings" class="nav-link">Offerings</a>
+                  </li>
+                  <li>
+                    <a href="https://cultureprotocol.gitbook.io/culture-protocol/" target="_blank" class="nav-link">Docs</a>
+                  </li>
+                  <li class="mobile-margin-top-10">
+                    <a href="https://calendly.com/cultureprotocol/call" target="_blank" class="nav-button-wrapper w-inline-block">
+                      <div class="btn-text">Start Lending</div><img src="images/culture-protocol-svg_1.svg" loading="lazy" alt="">
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="menu-button w-nav-button">
+                <div class="w-icon-nav-menu"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="spacer-nav"></div>
+      <div id="hero" class="section_hero"><img src="images/hero-culture-protocol.svg" loading="lazy" alt="" class="section-background">
+        <div class="padding-global padding-section-large">
+          <div class="container-large">
+            <div class="hero_grid"><img src="images/hero-image.svg" loading="lazy" alt="" class="col-image">
+              <div id="w-node-e4636d79-8a68-0eeb-a4fe-b5ab59dbec3f-e10493db" class="hero_content">
+                <h1 class="heading">Institutional Grade <span class="gradient-span">On-chain Marketplace for</span> Global Alternative Assets</h1>
+                <div id="w-node-e4636d79-8a68-0eeb-a4fe-b5ab59dbec44-e10493db" class="margin-top margin-medium">
+                  <div class="button-group">
+                    <a href="https://calendly.com/cultureprotocol/call" target="_blank" class="button-wrapper is-second w-inline-block">
+                      <div class="light-btn-wrap">
+                        <div class="btn-text">Start Lending</div><img src="images/culture-protocol-svg_1.svg" loading="lazy" alt="">
+                      </div>
+                    </a>
+                    <a href="https://t.me/CultureProtocol" target="_blank" class="button-wrapper w-inline-block">
+                      <div class="btn-text">Join Community</div><img src="images/culture-protocol-svg_1.svg" loading="lazy" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="about" class="section-about">
+        <div class="padding-global padding-section-large">
+          <div class="container-large">
+            <div class="_2col-grid">
+              <div id="w-node-_71aee6ef-7bb8-209b-6de7-114a419557cf-e10493db" class="col-content">
+                <h1 class="heading-style-h2">About Culture Protocol</h1>
+                <div class="spacer-medium"></div>
+                <div class="spacer-medium"></div>
+                <ul role="list">
+                  <li>Culture Protocol is a On-Chain marketplace, which brings fixed income opportunities offering high yield from RWA’s</li>
+                  <li>Our Platform enables business in emerging markets to access vital capital for their growth and expansion needs.</li>
+                  <li>Culture Protocol acts as a bridge between lenders and borrowers looking for new age capital.</li>
+                </ul>
+              </div><img src="images/about.png" loading="lazy" alt="" class="col-image">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="how-it-works" class="section-credits">
+        <div class="padding-global padding-section-large">
+          <div class="container-large">
+            <div>
+              <h2 class="heading-style-h2">Credit Societies - The same, but Sweeter</h2>
+              <div class="spacer-xlarge"></div>
+              <div class="_4-col-grid">
+                <div class="credits-card"><img src="images/mm.svg" loading="lazy" alt="">
+                  <div class="spacer-medium"></div>
+                  <h3 class="credits-card-heading">Managed Marketplace</h3>
+                  <div class="spacer-xmedium"></div>
+                  <p>Access to a mix of opportunities with yields generated by lending to real businesses, underwritten by professionals.</p>
+                </div>
+                <div class="credits-card"><img src="images/tl.svg" loading="lazy" alt="">
+                  <div class="spacer-medium"></div>
+                  <h3 class="credits-card-heading">TransparentLending</h3>
+                  <div class="spacer-xmedium"></div>
+                  <p>Every loan, loan term, and loan status is transparently displayed so Lenders can make informed decisions when allocating capital.</p>
+                </div>
+                <div class="credits-card"><img src="images/if.svg" loading="lazy" alt="">
+                  <div class="spacer-medium"></div>
+                  <h3 class="credits-card-heading">InstitutionalFocus</h3>
+                  <div class="spacer-xmedium"></div>
+                  <p>Maple partners with regulated service providers and leading institutions to provide custody and wallet solutions, and KYC and AML checks on Lenders and all Borrowers.</p>
+                </div>
+                <div class="credits-card"><img src="images/dl.svg" loading="lazy" alt="">
+                  <div class="spacer-medium"></div>
+                  <h3 class="credits-card-heading">Designed for Lenders</h3>
+                  <div class="spacer-xmedium"></div>
+                  <p>Once onboarded making deposits and managing positions is simple. The team is available 24/7 to support Lenders.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="offerings" class="section-diversify">
+        <div class="padding-global padding-section-large">
+          <div class="container-large">
+            <div class="diversify-component">
+              <div class="tag">Spreading Wealth Across Assets</div>
+              <h2 class="heading-style-h2 diverdity">Diversify Across Assets</h2>
+              <div class="spacer-xlarge"></div>
+              <div class="_4-col-grid">
+                <div id="w-node-_2d9ac39a-5744-ec86-354c-3e1b9edfe9d4-e10493db" class="diversify-card"><img src="images/gb.svg" loading="lazy" alt="">
+                  <h3 class="diversify-heading">Green Bonds</h3>
+                </div>
+                <div id="w-node-_5e367201-52a1-e73a-feec-a356449a4038-e10493db" class="diversify-card"><img src="images/tf.svg" loading="lazy" alt="">
+                  <h3 class="diversify-heading">Trade Finance</h3>
+                </div>
+                <div id="w-node-_8289f565-ffc3-3d83-51be-da5516a322e6-e10493db" class="diversify-card"><img src="images/acs.svg" loading="lazy" alt="">
+                  <h3 class="diversify-heading">Agriculture Credit Societies</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-get-started">
+        <div class="padding-global padding-section-large">
+          <div class="container-large">
+            <div>
+              <h2 class="heading-style-h2">Get started with Culture Protocol</h2>
+              <div class="spacer-xlarge"></div>
+              <div class="gs-cards-component">
+                <div id="w-node-_188c120e-9fd5-0586-d204-0547ebeed801-e10493db" class="started-card"><img src="images/el2.svg" loading="lazy" alt="">
+                  <div class="spacer-medium"></div>
+                  <h3 class="gs-heading">Explore Lending</h3>
+                  <div class="spacer-small"></div>
+                  <div class="spacer-xxsmall"></div>
+                  <p class="text-size-regular">See how Lending meet the Pool and access opportunities Curated to suit liquidity, risk and return requirements.</p>
+                  <div class="spacer-xlarge"></div>
+                </div>
+                <div class="started-card"><img src="images/dyp.svg" loading="lazy" alt="">
+                  <div class="spacer-medium"></div>
+                  <h3 class="gs-heading">Diversify your Portfolio</h3>
+                  <div class="spacer-small"></div>
+                  <div class="spacer-xxsmall"></div>
+                  <p class="text-size-regular">Compare Pools by assessing APY, current pools and protection in place. onboard, monitor and manage positions directly from pool page.</p>
+                  <div class="spacer-xlarge"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-snowball">
+        <div class="padding-global padding-section-large">
+          <div class="container-large">
+            <div class="_2col-grid">
+              <div id="w-node-_04334691-f922-d088-ddb3-23540d79fb8d-e10493db" class="col-content">
+                <h1 class="heading-style-h2">The Snowball Effect</h1>
+                <div class="spacer-medium"></div>
+                <p>How our Actions impacts the world around us.Culture Protocol bold mission is to enable alternative assets to On-Chain, with the Defi, with it’s Unwavering commitment to Expanding Financial Inclusivity.</p>
+                <div class="spacer-medium"></div>
+                <ul role="list">
+                  <li>Providing credit access to important driven societies.</li>
+                  <li>Driving Innovation.</li>
+                  <li>Incentivise Green Energy adoption.</li>
+                  <li>Fuelling growth and development.</li>
+                </ul>
+              </div><img src="images/snowball-effect-updated.png" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 93vw, (max-width: 991px) 92vw, 40vw" srcset="images/snowball-effect-updated-p-500.png 500w, images/snowball-effect-updated.png 559w" alt="" class="col-image">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-faq">
+        <div class="padding-global padding-section-large">
+          <div class="container-large">
+            <div class="_2col-grid">
+              <div id="w-node-a9581de8-53d1-3783-345f-75ddb006c788-e10493db" class="col-content">
+                <h1 class="heading-style-h2">Have Any Questions?</h1>
+                <div class="spacer-small"></div>
+                <p>Our Team will be glad to help</p>
+                <div class="spacer-medium"></div>
+                <p>The Culture ecosystem act as a bridge between asset owners (deal originators), and individual lenders.</p>
+                <div class="spacer-huge"></div>
+                <div class="margin-top auto">
+                  <a href="https://calendly.com/cultureprotocol/call" target="_blank" class="button-wrapper w-inline-block">
+                    <div class="btn-text">Schedule a Call</div><img src="images/culture-protocol-svg_1.svg" loading="lazy" alt="">
+                  </a>
+                </div>
+              </div><img src="images/faq-image.svg" loading="lazy" alt="" class="col-image">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="padding-global padding-section-medium">
+          <div class="container-large">
+            <div class="footer-component">
+              <div class="footer-logo-wrap"><img src="images/footer-logo.svg" loading="lazy" alt="">
+                <div class="w-form">
+                  <form id="email-form" name="email-form" data-name="Email Form" action="https://formsubmit.co/cultureprotocols@gmail.com" method="post" class="form" data-wf-page-id="65baf42e0b4967e9e10493db" data-wf-element-id="577d6c8c-226b-1b99-08ba-cf987bb0dd05"><input class="field w-node-_577d6c8c-226b-1b99-08ba-cf987bb0dd0b-e10493db w-input" maxlength="256" name="email" data-name="Email" placeholder="Enter your email" type="email" id="email" required=""><input type="submit" data-wait="Please wait..." class="gs w-button" value="Get Started"></form>
+                  <div class="w-form-done">
+                    <div>Thank you! Your submission has been received!</div>
+                  </div>
+                  <div class="w-form-fail">
+                    <div>Oops! Something went wrong while submitting the form.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-right">
+                <div class="footer-col">
+                  <h2 class="footer-h2">About</h2>
+                  <a href="#how-it-works" class="footer-link">How it works</a>
+                  <a href="#offerings" class="footer-link">Offerings</a>
+                  <a href="mailto:cultureprotocols@gmail.com" class="footer-link">Contact</a>
+                  <a href="https://cultureprotocol.gitbook.io/culture-protocol/" target="_blank" class="footer-link">Docs</a>
+                </div>
+                <div class="footer-col">
+                  <h2 class="footer-h2">Follow Us</h2>
+                  <div class="social-links">
+                    <a href="https://www.linkedin.com/company/cultureprotocol/" target="_blank" class="w-inline-block">
+                      <div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewbox="0 0 26 27" fill="none">
+                          <path d="M3.55859 21.8333H7.30637V10.1299H3.55859V21.8333Z" fill="black"></path>
+                          <path d="M5.41597 8.597C6.64003 8.597 7.63196 7.62929 7.63196 6.43643C7.63196 5.24432 6.64003 4.27734 5.41597 4.27734C4.19114 4.27734 3.19922 5.24432 3.19922 6.43643C3.19922 7.62929 4.19114 8.597 5.41597 8.597Z" fill="black"></path>
+                          <path d="M13.2982 15.6885C13.2982 14.0433 14.0817 13.063 15.5822 13.063C16.9597 13.063 17.6217 14.0041 17.6217 15.6885C17.6217 17.3738 17.6217 21.8323 17.6217 21.8323H21.352C21.352 21.8323 21.352 17.5568 21.352 14.4219C21.352 11.2869 19.514 9.77148 16.9468 9.77148C14.3788 9.77148 13.2982 11.7048 13.2982 11.7048V10.1288H9.70312V21.8323H13.2982C13.2982 21.8323 13.2982 17.4911 13.2982 15.6885Z" fill="black"></path>
+                        </svg></div>
+                    </a>
+                    <a href="https://t.me/CultureProtocol" target="_blank" class="w-inline-block">
+                      <div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewbox="0 0 26 27" fill="none">
+                          <path d="M23.6557 4.07051C23.676 3.94367 23.6641 3.81351 23.6211 3.69293C23.5781 3.57235 23.5055 3.46552 23.4105 3.38301C23.3156 3.30051 23.2015 3.24518 23.0796 3.22251C22.9578 3.19983 22.8323 3.2106 22.7156 3.25375L2.8043 10.6385C2.67305 10.6871 2.55845 10.7747 2.47472 10.8904C2.39099 11.0061 2.34184 11.1447 2.33335 11.2892C2.32487 11.4336 2.35743 11.5774 2.427 11.7028C2.49657 11.8282 2.60007 11.9296 2.72466 11.9944L8.41361 14.9483C8.52572 15.0066 8.65068 15.0331 8.77581 15.025C8.90095 15.017 9.02181 14.9747 9.12615 14.9025L13.848 11.6325L11.022 15.3043C10.9605 15.3842 10.9157 15.4765 10.8903 15.5754C10.865 15.6742 10.8597 15.7775 10.8748 15.8786C10.8899 15.9797 10.9251 16.0764 10.9781 16.1626C11.0311 16.2489 11.1008 16.3227 11.1827 16.3795L19.7161 22.2874C19.815 22.3556 19.9286 22.3971 20.0468 22.408C20.165 22.4189 20.284 22.3989 20.3928 22.3499C20.5017 22.3009 20.597 22.2243 20.6701 22.1272C20.7432 22.0301 20.7917 21.9156 20.8113 21.7941L23.6557 4.07051Z" fill="black"></path>
+                        </svg></div>
+                    </a>
+                    <a href="https://twitter.com/ProtocolCulture" target="_blank" class="w-inline-block">
+                      <div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewbox="0 0 26 27" fill="none">
+                          <path d="M24.8459 6.41068C24.0246 6.78401 23.1392 7.02934 22.2219 7.14668C23.1606 6.58134 23.8859 5.68534 24.2273 4.60801C23.3419 5.14134 22.3606 5.51468 21.3259 5.72801C20.4832 4.81068 19.2993 4.27734 17.9553 4.27734C15.4486 4.27734 13.4006 6.32534 13.4006 8.85334C13.4006 9.21601 13.4433 9.56801 13.5179 9.89868C9.72058 9.70668 6.33925 7.88267 4.08858 5.12001C3.69392 5.79201 3.46992 6.58134 3.46992 7.41334C3.46992 9.00268 4.26992 10.4106 5.50725 11.2106C4.74992 11.2106 4.04592 10.9973 3.42725 10.6773V10.7093C3.42725 12.928 5.00592 14.784 7.09658 15.2C6.42536 15.3837 5.72069 15.4092 5.03792 15.2746C5.32763 16.1839 5.89502 16.9796 6.66033 17.5498C7.42565 18.1199 8.35039 18.4359 9.30458 18.4533C7.68712 19.7338 5.68218 20.4259 3.61925 20.416C3.25658 20.416 2.89392 20.3946 2.53125 20.352C4.55792 21.6533 6.96858 22.4106 9.54992 22.4106C17.9553 22.4106 22.5739 15.4346 22.5739 9.38668C22.5739 9.18401 22.5739 8.99201 22.5632 8.78934C23.4592 8.14934 24.2272 7.33867 24.8459 6.41068Z" fill="black"></path>
+                        </svg></div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=65baf42e0b4967e9e10493d4" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+</body>
+</html>
